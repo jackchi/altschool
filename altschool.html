@@ -1,0 +1,33 @@
+<head>
+  <title>Random Tiles</title>
+</head>
+
+<body>
+  {{> panel}}
+  {{> board}}
+</body>
+
+<template name="panel">
+  <h1>Board Size: {{size.x}} x {{size.y}}</h1>
+
+  <input type="number" value="" name="x" class="size"/>
+  x
+  <input type="number" value="" name="y" class="size"/>	
+  
+  <input type="button" value="Clear" name="clear" />
+
+</template>
+
+<template name="board">
+	<div class="board">	
+		
+			{{> square}}
+				
+	</div>
+</template>
+
+<template name="square">
+	<div class="square">
+			Square
+	</div>	
+</template>
