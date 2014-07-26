@@ -21,6 +21,10 @@ if (Meteor.isClient) {
     return Board.findOne({name : "size"});
   }
 
+  Template.square.randomColor = function() {
+    return '#'+(function lol(m,s,c){return s[m.floor(m.random() * s.length)] +
+  (c && lol(m,s,c-1));})(Math,'0123456789ABCDEF',4);
+  }
 
 
 
